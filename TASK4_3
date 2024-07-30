@@ -1,0 +1,20 @@
+class Circle:
+    # Class private variable
+    __pi = 3.141
+
+    def __init__(self, radius_list):
+        self.radius_list = radius_list
+
+    # Method to calculate the area of circles
+    def area(self):
+        return [self.__pi * r ** 2 for r in self.radius_list]
+
+    # Method to calculate the perimeter of circles
+    def perimeter(self):
+        return [2 * self.__pi * r for r in self.radius_list]
+
+radii = [10, 501, 22, 37, 100, 999, 87, 351]
+circle = Circle(radii)
+
+print("Areas:", circle.area())
+print("Perimeters:", circle.perimeter())
